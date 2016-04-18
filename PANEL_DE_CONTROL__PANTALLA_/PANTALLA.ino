@@ -132,14 +132,14 @@ void PANTALLA(char DATOpantalla) {
       lcd.print("Activando en:   ");
       lcd.setCursor(0, 1);
       lcd.print("  10 segundos   ");
-      int i = 0;
-      for (i = 0; i <= 9; i++) {
-        digitalWrite(30, HIGH);
-        delay(500);
-        digitalWrite(30, LOW);
-        delay(500);
-      }
+      CONTADOR_ACTIVANDO_ALARMA();
       break;
 
+    case 's':
+      lcd.setCursor(0, 0);
+      lcd.print("Dato            ");
+      lcd.setCursor(0, 1);
+      lcd.print("         Enviado");
+      break;
   }
 }

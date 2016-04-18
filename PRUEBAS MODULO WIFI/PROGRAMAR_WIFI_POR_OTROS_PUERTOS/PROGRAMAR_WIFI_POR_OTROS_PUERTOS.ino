@@ -3,8 +3,8 @@
 SoftwareSerial WIFI_1(53, 52); // RX | TX
 
 void setup()
-  {  Serial.begin(19200);
-     WIFI_1.begin(19200);
+  {  Serial.begin(9200);
+     WIFI_1.begin(9200);
   }
 
 void loop()

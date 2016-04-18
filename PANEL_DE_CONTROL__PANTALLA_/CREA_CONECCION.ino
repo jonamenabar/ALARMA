@@ -16,7 +16,10 @@ WIFI_1.write(34);
 WIFI_1.println(",80");
 delay(10);
 
+WIFI_1.flush(); //LIMPIO EL BUFFER
+
 PANTALLA(DATO);
+CHEK_CONECCION();
 ENVIAR_DATO('q');
 
   

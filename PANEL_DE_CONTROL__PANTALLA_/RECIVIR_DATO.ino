@@ -1,7 +1,7 @@
 void RECIVIR_DATO() {
 
   byte posicion = 0;  //Variable para cambiar la posición de los caracteres del array, le pongo un numero distinto para comenzar desde otro valor
-  
+
   char CADENA[30];    //Creo un char para recivir los datos
 
 
@@ -13,7 +13,7 @@ void RECIVIR_DATO() {
     {
       delay(5);                                   //Poner un pequeño delay para mejorar la recepción de datos
       CADENA[posicion] = WIFI_1.read();           //Lee un carácter del string "cadena" de la "posicion", luego lee el siguiente carácter con "posicion++"
-      
+
     }
     WIFI_1.flush();                               //vacio el buffer del wifi
 
@@ -28,13 +28,13 @@ void RECIVIR_DATO() {
       if (CADENA[posicion] == ':' ) {    //busco los dos puntos y tomo el dato que le sigue en el array
         DATO = CADENA[posicion + 1];
         posicion = sizeof(CADENA);      //lo igualo para que salga del for
-        
+
       }
     }
     WIFI_1.flush();                               //vacio el buffer del wifi
 
 
-    IDENTIFICADOR_CODIGOS();                      //llamo al identificador de codigos par aque vea que es
+    //IDENTIFICADOR_CODIGOS();                      //llamo al identificador de codigos par aque vea que es
 
 
 
